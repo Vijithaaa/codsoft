@@ -1,0 +1,80 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(hsla(210, 95%, 77%, 0.6), hsl(271, 90%, 88%, 0.5)); /* Soft blue and purple gradient */
+    color: #333;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Weather container */
+#container {
+    background: linear-gradient(rgba(142, 197, 252, 0.9), rgba(224, 195, 252, 0.9)); /* Soft blue and purple gradient */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    width: 550px;  /* Increased width */
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+/* Input field */
+input[type="text"] {
+    width: 85%;
+    padding: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Soft border */
+    border-radius: 8px;
+    font-size: 18px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2); /* Light transparent background */
+    color: #333;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+    background: rgba(255, 255, 255, 0.5);
+    border-color: #4A89DC;
+}
+
+/* Search button */
+input[type="button"] {
+    background: #5D9CEC; /* Soft blue */
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+input[type="button"]:hover {
+    background: #4A89DC; /* Slightly darker blue */
+}
+
+/* Weather display section */
+#display {
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 1.8;
+    color: #222;
+    font-weight: bold;
+}
+
+/* Weather text */
+p {
+    margin: 8px 0;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    #container {
+        width: 90%;
+    }
+}
