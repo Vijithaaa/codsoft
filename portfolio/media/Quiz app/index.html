@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Quiz</title>
+<link rel="stylesheet" href="./style.css">
+   </head>
+
+<body id="body">
+    <div id="container" class="container">
+     <div class="title">HTML Quiz</div>
+     <div id="question" class="question"> </div> 
+
+     <label class="option"  >
+        <input type="radio" name="option" class="option" value="1">
+        <span id="option1">  </span>
+     </label>
+     <label class="option" >
+        <input type="radio" name="option" class="option" value="2">
+        <span id="option2"> </span>
+     </label>
+     <label class="option" >
+        <input type="radio" name="option" class="option" value="3">
+        <span  id="option3"> </span>
+     </label>
+     <label class="option"  >
+        <input type="radio" name="option" class="option" value="4">
+        <span id="option4"> </span>
+     </label>
+     
+     <button id="Nextquestion"  type="button" onclick="loadNextquestion();">Next Question</button>
+
+     
+     
+     
+   </div>
+   
+   <button type="button" class="nextbutton" onclick="restartGame(); ">Restart</button>
+   
+   <div id="score"> </div>
+    <!-- <div class="container result" style="display: none;" id="result">Result</div> -->
+     <script type="text/javascript" src="questions.js"></script>
+      <script type="text/javascript" src="quiz.js"></script>
+    
+
+</body>
+</html>

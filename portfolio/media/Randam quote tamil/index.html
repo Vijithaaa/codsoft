@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randam Quote</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            align-items: center;
+            justify-content: center;
+            /* background-color: #ffdead; */
+            background-image: linear-gradient(rgb(171, 112, 171),rgb(158, 207, 244));
+        }
+
+        .box {
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            /* background-color: rgb(100, 147, 174); */
+            background-image: linear-gradient(purple,rgb(168, 124, 185),rgb(203, 119, 180));
+            box-shadow: rgba(0, 0, 0, 24);
+            border-radius: 1rem;
+        }
+
+        q {
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            font-weight: 700;
+            border-radius: 20px;
+            color: #4b1414;
+        }
+
+        q::before {
+            align-self: flex-start;
+            margin-bottom: -8px;
+            font-weight: 900;
+
+        }
+
+        q::after {
+            font-weight: 900;
+            align-self: flex-end;
+        }
+
+        #quoteauthor {
+            padding: 10px;
+            font-size: 17px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            border-radius: 11px;
+            background-color: #d4f6f6;
+            color: #33585b;
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0)0px 1px 3px -1px;
+        }
+
+        button {
+            outline: none;
+            border: none;
+            background-color: #fff;
+            padding: 10px 15px;
+            font-size: 20px;
+            font-weight: 900;
+            border-radius: 11px;
+            background-color: #d6e4e5;
+            color: #d751d1;
+            box-shadow: rgba(60, 64, 67, 0.3)0px 1px 2px 0px, rgba(60, 64, 67, 0.15)0px 2px 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box">
+            <h2>
+
+                <q id="quote">Quote</q>
+            </h2>
+            <p id="quoteauthor">Author</p>
+        </div>
+        <button id="quoteButton">Generate Quotes</button>
+    </div>
+
+    <script>
+        const quote = document.getElementById('quote');
+        const quoteauthor = document.getElementById('quoteauthor')
+        const quoteButton = document.getElementById('quoteButton')
+
+
+        const quotes = [
+            {
+                name: 'Life is what happens when you are busy making other plans.',
+                Quotes: '— John Lennon'
+            },
+            {
+                name: 'Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.',
+                quotes: '— Buddha'
+            },
+            {
+                name: "In the end, it's not the years in your life that count. It's the life in your years.",
+
+                quotes: "— Abraham Lincoln"
+            },
+            {
+                name: "Life is really simple, but we insist on making it complicated.",
+                quotes: "Confucius"
+            },
+            {
+                name: "You only live once, but if you do it right, once is enough.",
+                quotes: "— Mae West"
+            },
+            {
+                name: "The purpose of life is not to be happy. It is to be useful, to be honorable, to be compassionate, to have it make some difference that you have lived and lived well.",
+                quotes: "— Ralph Waldo Emerson"
+            }, {
+                name: "Life is short, and it is up to you to make it sweet.",
+                quotes: "— Sarah Louise Delany"
+            }, {
+                name: "Keep calm and carry on.",
+                quotes: "— Winston Churchill"
+            }, {
+                name: "The best way to predict your future is to create it.",
+                quotes: "— Peter Drucker"
+            },
+            {
+                name: "It does not matter how slowly you go as long as you do not stop.",
+                quotes: "— Confucius"
+            }
+
+
+        ];
+
+        quoteButton.addEventListener('click', randomQuote);
+        function randomQuote() {
+            let num = Math.floor(Math.random() * quotes.length);
+            quote.innerText = quotes[num].name;
+            quoteauthor.innerText = quotes[num].quotes;
+
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    text-align: center;
+    padding: 20px;
+}
+
+/* Quiz Container */
+.container {
+    background: #fff;
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Question Styling */
+.question {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Options */
+.option {
+    display: flex;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Default Radio Button Size */
+.option input[type="radio"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Selected Option Effect */
+.option:has(input[type="radio"]:checked) {
+    background-color: #d1e7ff;
+    transform: scale(1.02);
+}
+
+/* Next & Restart Buttons */
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Hide Restart Button Initially */
+#restartButton {
+    display: none;
+}
+
+/* Score Display */
+#score {
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+}
